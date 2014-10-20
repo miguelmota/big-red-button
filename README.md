@@ -6,9 +6,11 @@ A node-hid based driver to read actions from the [Dream Cheeky Big Red Button](h
 
 This was initially a fork of [BigRedButtonNodeHID](https://github.com/codepope/BigRedButtonNodeHID) by [Dj Walker-Morgan](https://github.com/codepope).
 
-The test gives an example of use. Polls every 100ms for status and emits lidRaised, lidClosed, buttonPressed, buttonReleased events. Also has functions isLidUp(), isLidDown() and isButtonPressed() for determining state with reference to events.
-
 # Usage
+
+```
+npm install big-red-button
+```
 
 ```javascript
 var BigRedButton = require('../index');
@@ -42,14 +44,19 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
 ## Events
 
 `lidRaised`
+
 `lidClosed`
+
 `buttonPressed`
+
 `buttonReleased`
 
 ## State methods
 
 `button.isLidUp()`
+
 `button.isLidDown()`
+
 `button.isButtonPressed()`
 
 # License
