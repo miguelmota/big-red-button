@@ -1,0 +1,29 @@
+{
+  "name": "big-red-button",
+  "version": "0.0.1",
+  "description": "Big Red Button interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelmota/big-red-button.git"
+  },
+  "keywords": [
+    "big red button"
+  ],
+  "bin": {
+	  "clean-dropbox-conflicted": "bin/index.js"
+  },
+  "preferGlobal": "true",
+  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguelmota/big-red-button/issues"
+  },
+  "homepage": "https://github.com/miguelmota/big-red-button",
+  "dependencies": {
+    "node-hid": "^0.3.1"
+  }
+}
