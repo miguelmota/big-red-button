@@ -1,6 +1,6 @@
 {
   "name": "big-red-button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Big Red Button interface.",
   "main": "index.js",
   "scripts": {

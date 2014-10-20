@@ -34,7 +34,7 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
     console.log('Lid raised');
   });
 
-  bigRedButton[i].on('lidClosed', function () {
+  bigRedButtons[i].on('lidClosed', function () {
     console.log('Lid closed');
   });
 
