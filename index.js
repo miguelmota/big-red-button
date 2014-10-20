@@ -84,7 +84,7 @@ BigRedButton.prototype.isLidDown = function() {
   return lastState === LID_DOWN;
 };
 
-module.exports {
+module.exports = {
   BigRedButton: BigRedButton,
   deviceCount: function () {
     return getAllDevices().length;
