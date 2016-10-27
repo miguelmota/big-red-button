@@ -13,9 +13,6 @@
   "keywords": [
     "big red button"
   ],
-  "bin": {
-	  "clean-dropbox-conflicted": "bin/index.js"
-  },
   "preferGlobal": "true",
   "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
   "license": "MIT",
@@ -24,6 +21,6 @@
   },
   "homepage": "https://github.com/miguelmota/big-red-button",
   "dependencies": {
-    "node-hid": "^0.3.1"
+    "node-hid": "^0.5.1"
   }
 }

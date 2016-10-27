@@ -13,7 +13,7 @@ npm install big-red-button
 ```
 
 ```javascript
-var BigRedButton = require('../index');
+var BigRedButton = require('big-red-button');
 
 var bigRedButtons = [];
 
@@ -61,4 +61,4 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
 
 # License
 
-MIT.
+MIT`
