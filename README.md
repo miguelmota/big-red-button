@@ -2,7 +2,7 @@
 
 > A node-hid based driver to read actions from the [Dream Cheeky Big Red Button](http://dreamcheeky.com/big-red-button).
 
-<img src="./assets/big_red_button.jpg" width="500">
+<img src="./assets/big_red_button.jpg" width="350">
 
 ## Credit
 
