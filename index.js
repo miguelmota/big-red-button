@@ -3,7 +3,7 @@ var util = require('util');
 var events = require('events');
 
 var allDevices;
-var cmdStatus = new Buffer([0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02]);
+var cmdStatus = [ 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02 ]
 var lastState;
 
 var LID_DOWN = 0x15, LID_UP = 0x17, BUTTON_DOWN = 0x16;
@@ -29,12 +29,17 @@ function BigRedButton(index) {
 
   this.hid = new HID.HID(bigRedButton[index].path);
 
-  this.hid.write(cmdStatus);
-
-  this.hid.read(function(error,data) {
+  this.hid.on('data', function(data) {
     lastState = data[0];
     this.hid.read(this.interpretData.bind(this));
-  }.bind(this));
+  }.bind(this))
+
+  this.hid.on('error', function(error) {
+    console.error(error)
+  }.bind(this))
+
+
+  this.hid.write(cmdStatus);
 
   setInterval(this.askForStatus.bind(this), 100);
 }

@@ -1,6 +1,6 @@
 {
   "name": "big-red-button",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Big Red Button interface.",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/miguelmota/big-red-button",
   "dependencies": {
-    "node-hid": "^0.5.1"
+    "node-hid": "^0.5.7"
   }
 }
