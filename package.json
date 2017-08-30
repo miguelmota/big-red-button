@@ -11,10 +11,15 @@
     "url": "https://github.com/miguelmota/big-red-button.git"
   },
   "keywords": [
-    "big red button"
+    "big",
+    "red",
+    "button",
+    "hid",
+    "controller",
+    "usb"
   ],
   "preferGlobal": "true",
-  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
+  "author": "Miguel Mota <hello@miguelmota.com> (https://miguelmota.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/miguelmota/big-red-button/issues"

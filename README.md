@@ -45,21 +45,21 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
 
 ## Events
 
-`lidRaised`
+- `lidRaised`
 
-`lidClosed`
+- `lidClosed`
 
-`buttonPressed`
+- `buttonPressed`
 
-`buttonReleased`
+- `buttonReleased`
 
 ## State methods
 
-`button.isLidUp()`
+- `button.isLidUp()`
 
-`button.isLidDown()`
+- `button.isLidDown()`
 
-`button.isButtonPressed()`
+- `button.isButtonPressed()`
 
 # License
 
