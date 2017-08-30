@@ -23,4 +23,7 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
     console.log('Lid closed');
   });
 
+  bigRedButtons[i].on('error', function (error) {
+    console.error(error);
+  });
 }
