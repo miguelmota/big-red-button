@@ -1,6 +1,6 @@
 {
   "name": "big-red-button",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Big Red Button interface.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,6 @@
     "controller",
     "usb"
   ],
-  "preferGlobal": "true",
   "author": "Miguel Mota <hello@miguelmota.com> (https://miguelmota.com/)",
   "license": "MIT",
   "bugs": {

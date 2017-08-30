@@ -8,11 +8,13 @@
 
 This was initially a fork of [BigRedButtonNodeHID](https://github.com/codepope/BigRedButtonNodeHID) by [Dj Walker-Morgan](https://github.com/codepope).
 
-# Usage
+# Install
 
-```
+```bash
 npm install big-red-button
 ```
+
+# Usage
 
 ```javascript
 var BigRedButton = require('big-red-button');
@@ -63,4 +65,4 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
 
 # License
 
-MIT`
+MIT
