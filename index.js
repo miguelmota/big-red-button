@@ -27,30 +27,39 @@ function BigRedButton(index) {
     throw new Error(['Index ', index, ' out of range, only ', bigRedButton.length, ' BigRedButton found'].join(''));
   }
 
-  this.hid = new HID.HID(bigRedButton[index].path);
+  try {
+    this.hid = new HID.HID(bigRedButton[index].path);
 
-  this.hid.on('data', function(data) {
-    lastState = data[0];
-    this.hid.read(this.interpretData.bind(this));
-  }.bind(this))
+    this.hid.on('data', function(data) {
+      lastState = data[0];
+      this.hid.read(this.interpretData.bind(this));
+    }.bind(this))
 
-  this.hid.on('error', function(error) {
-    console.error(error)
-  }.bind(this))
+    this.hid.on('error', function(error) {
+      console.error(error)
+    }.bind(this))
 
+    this.hid.write(cmdStatus);
 
-  this.hid.write(cmdStatus);
-
-  setInterval(this.askForStatus.bind(this), 100);
+    setInterval(this.askForStatus.bind(this), 100);
+  } catch (error) {
+    this.emit(error)
+  }
 }
 
 util.inherits(BigRedButton, events.EventEmitter);
 
 BigRedButton.prototype.askForStatus = function() {
-  this.hid.write(cmdStatus);
+  try {
+    this.hid.write(cmdStatus);
+  } catch (error) {
+    this.emit(error)
+  }
 };
 
 BigRedButton.prototype.interpretData = function(error, data) {
+  if (!data) return false
+
   var nState = data[0];
 
   if(lastState !== nState) {
