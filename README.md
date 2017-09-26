@@ -68,6 +68,37 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
 
 - `button.isButtonPressed()`
 
+## FAQ
+
+- Q. It's not working on linux!
+
+  - A. On linux, you may need to run as root for it to work. You can try setting a rule for non-root users to access the device.
+
+    Create the rule file:
+
+    ```bash
+    sudo vim /etch/udev/rules.d/100-bigred.rules
+    ```
+
+    and add the following:
+
+    ```bash
+    SUBSYSTEM=="input", GROUP="input", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="7476", ATTRS{idProduct}=="13", MODE:="666", GROUP="plugdev"
+    ```
+
+    Afterwards, you can reload the service:
+
+    ```bash
+    sudo udevadm control --reload-rules
+    ```
+
+    More info on the [node-hid](https://github.com/node-hid/node-hid#udev-device-permissions) repo.
+
+- Q. What's the vendor ID and product ID?
+
+  - A. The Vendor ID `7476`. Product ID is `13`.
+
 # License
 
 MIT
