@@ -97,7 +97,7 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
 
 - Q. What's the vendor ID and product ID?
 
-  - A. The Vendor ID `7476`. Product ID is `13`.
+  - A. The vendor ID is `7476`. The product ID is `13`.
 
 # License
 
