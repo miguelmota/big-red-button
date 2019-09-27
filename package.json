@@ -1,11 +1,11 @@
 {
   "name": "big-red-button",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Big Red Button interface.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard --fix *.js"
+    "lint": "standard --fix *.js example/*.js"
   },
   "repository": {
     "type": "git",
