@@ -1,4 +1,6 @@
-var BigRedButton = require('../index');
+#!/usr/bin/env node
+
+var BigRedButton = require('../');
 
 var bigRedButtons = [];
 

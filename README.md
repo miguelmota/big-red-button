@@ -77,7 +77,7 @@ for (var i = 0; i < BigRedButton.deviceCount(); i++) {
     Create the rule file:
 
     ```bash
-    sudo vim /etch/udev/rules.d/100-bigred.rules
+    sudo vim /etc/udev/rules.d/100-bigred.rules
     ```
 
     and add the following:
